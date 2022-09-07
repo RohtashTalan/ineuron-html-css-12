@@ -1,0 +1,632 @@
+/* POPPINS FONT FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* css variable and resets */
+
+:root {
+    --cl-white: hsl(0, 0%, 100%);
+    --cl-grey: hsl(0, 0%, 100%);
+    --cl-grey-dark: hsl(0, 0%, 44%);
+    --cl-black: hsl(0, 0%, 0%);
+    --cl-grey-darkest: hsl(215, 10%, 43%);
+    --cl-green: hsl(151, 23%, 63%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: var(--cl-grey);
+    font-family: 'POPPINS', sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    color: var(--cl-black);
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* utilities classes */
+
+.container {
+    margin-inline: auto;
+    padding: 2rem 8rem;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    border-radius: 4px;
+    color: var(--cl-white);
+    background: var(--cl-green);
+}
+
+.section-heading {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 8rem 50rem 5rem 50rem;
+    line-height: 1.2;
+}
+
+.section-discription {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--cl-grey-dark);
+}
+
+/* header section */
+
+.header {
+    background-color: var(--cl-grey-darkest);
+}
+
+.nav-logo img {
+    width: 8rem;
+    height: 5rem;
+}
+
+.nav-list li {
+    margin-right: 5rem;
+}
+
+.nav-list li > a {
+    font-size: 1.3rem;
+    color: var(--cl-white);
+    cursor: pointer;
+}
+
+.nav-button {
+    font-size: 1.5rem;
+    color: var(--cl-white);
+    border: 1px solid var(--cl-grey);
+    background-color: transparent;
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    margin: 5rem 5rem;
+}
+
+.header-content-left {
+    padding: 30rem 25rem;
+    background-image: url(./images/pexels-fauxels-3183197.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.header-content-right {
+    padding: 3rem;
+    margin-top: -10rem;
+    margin-left: 10rem;
+}
+
+.header-content-right h1 {
+    font-size: 6rem;
+    line-height: 1.2;
+    color: var(--cl-white);
+    padding-bottom: 2rem;
+}
+
+.header-content-right p {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.8;
+    padding-right: 10rem;
+    color: var(--cl-white);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form > input {
+    outline: none;
+    border: none;
+    width: 50rem;
+    height: 5rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    border-radius: 4px;
+}
+
+.header-content-right form input::placeholder {
+    padding-left: 3rem;
+}
+
+.header-content-right form > button {
+    padding: 1.5rem 2rem;
+    width: 15rem;
+    margin-top: 2rem;
+    margin-left: -15rem;
+}
+
+/* about */
+
+.about {
+    margin-top: 5rem;
+}
+
+.about-stats {
+    margin: 7rem 25rem;
+}
+
+.about-stat h3 {
+    font-size: 4rem;
+}
+
+.about-stat h4 {
+    font-size: 1.3rem;
+    color: var(--cl-grey-dark);
+}
+
+.about-part-2 {
+    margin: 0 10rem;
+    padding: 30rem 18rem;
+    background-image: url(./images/pexels-fauxels-3184325.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.feature > h2 {
+    margin-bottom: 5rem;
+}
+
+.feature-card {
+    justify-content: space-evenly;
+}
+
+.feature-card-discription {
+    max-width: 40rem;
+    min-height: 100%;
+}
+
+.feature-card-discription h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.feature-card-discription p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.feature-card-image img {
+    width: 40rem;
+    height: 40rem;
+}
+
+/* team section */
+
+.team {
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+
+.team-part-1 {
+    margin: 0 8rem 10rem 8rem;
+}
+
+.team-part-1 h3 {
+    width: 40rem;
+    font-size: 4rem;
+}
+.team-part-1 p {
+    width: 50rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.8;
+    color: var(--cl-grey-dark);
+}
+
+.team-part-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0 20rem;
+}
+
+.team-card {
+    max-width: 100%;
+    min-height: 100%;
+    margin: 2rem;
+}
+
+.team-card > img {
+    max-width: 100%;
+}
+
+.team-card-heading {
+    max-width: 100%;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.team-card-discription {
+    width: 60%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+.team-part-3 {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--cl-black);
+    margin-top: 10rem;
+    padding: 5rem 8rem;
+    color: antiquewhite;
+}
+
+.footer-part-1 {
+    padding-bottom: 4rem;
+    border-bottom: 2px solid var(--cl-grey-dark);
+}
+
+.footer-logo img {
+    max-width: 8rem;
+    min-height: 5rem;
+}
+
+.footer-icons span {
+    padding: 3rem;
+    border-radius: 50%;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+.footer-icons span > img {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-part-2 {
+    margin-top: 4rem;
+}
+
+.footer-menu h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-menu ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-menu ul li > a {
+    color: var(--cl-white);
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+/* meida query */
+
+@media screen and (max-width: 1300px) {
+    .section-heading {
+        font-size: 3rem;
+        text-align: center;
+        padding: 8rem 30rem 5rem 30rem;
+        line-height: 1.2;
+    }
+    .header-content {
+        margin: 2rem;
+    }
+    .header-content-left {
+        padding: 20rem 18rem;
+    }
+    .header-content-right {
+        margin-top: -5rem;
+    }
+    .header-content-right h1 {
+        font-size: 4rem;
+        line-height: 1;
+    }
+    .header-content-right form input {
+        width: 30rem;
+    }
+
+    .header-content-right form input::placeholder {
+        padding-left: 0.8rem;
+    }
+
+    .header-content-right form > button {
+        margin-left: -10rem;
+    }
+
+    .team-part-2 {
+        margin: 0 5rem;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .container {
+        padding: 2rem 2rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+        text-align: center;
+        padding: 8rem 20rem 5rem 20rem;
+        line-height: 1.2;
+    }
+
+    .nav-list li {
+        margin-right: 2rem;
+    }
+
+    .nav-list li > a {
+        font-size: 1rem;
+    }
+    .header-content {
+        margin: 2rem;
+    }
+    .header-content-left {
+        padding: 10rem 10rem;
+    }
+    .header-content-right {
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+    .header-content-right h1 {
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
+    .header-content-right p {
+        padding-right: 0;
+    }
+    .header-content-right form input {
+        width: 20rem;
+    }
+
+    .header-content-right form input::placeholder {
+        padding-left: 0;
+    }
+
+    .header-content-right form > button {
+        margin-left: -2rem;
+    }
+
+    .about-stats {
+        margin: 7rem 10rem;
+    }
+    .about-stat h3 {
+        font-size: 2rem;
+    }
+
+    .about-stat h4 {
+        font-size: 1.3rem;
+    }
+    .about-part-2 {
+        margin: 0 5rem;
+        padding: 20rem 12rem;
+    }
+
+    .feature-card {
+        margin-bottom: 3rem;
+    }
+
+    .feature-card-discription h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .feature-card-discription p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .feature-card-image img {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .team-part-1 h3 {
+        font-size: 2rem;
+    }
+    .team-part-1 p {
+        font-size: 1rem;
+    }
+
+    .team-part-2 {
+        margin: 0 0rem;
+    }
+    .team-card img {
+        width: 20rem;
+    }
+
+    .footer-logo > img {
+        max-width: 6rem;
+    }
+
+    .footer-icons span {
+        padding: 1.2rem;
+    }
+
+    .footer-icons span > img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .footer-menu h3 {
+        font-size: 1rem;
+    }
+
+    .footer-menu ul li > a {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .section-heading {
+        font-size: 2rem;
+        text-align: center;
+        padding: 8rem 10rem 5rem 10rem;
+        line-height: 1.2;
+    }
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-content-right > h1,
+    p {
+        text-align: center;
+    }
+
+    .form > input {
+        height: 3rem;
+    }
+    .header-content-right form > button {
+        padding: 0.5rem;
+    }
+
+    .about-part-2 {
+        margin: 0 2rem;
+        padding: 15rem 8rem;
+    }
+
+    .feature-card-discription {
+        text-align: center;
+        max-width: 20rem;
+        min-height: 100%;
+    }
+
+    .feature-card-discription h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .feature-card-discription p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .feature-card-image img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .footer-part-2 {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-heading {
+        font-size: 2rem;
+        text-align: center;
+        padding: auto;
+        line-height: 1.2;
+    }
+    .nav-list {
+        display: none;
+    }
+
+    .form > input {
+        width: 40rem;
+    }
+    .header-content-right form > button {
+        padding: 0.5rem 1rem;
+        margin-top: 5rem;
+    }
+
+    .team-part-1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 0;
+        padding: 2rem;
+    }
+
+    .feature-card {
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+    .btn {
+        margin-bottom: 3rem;
+    }
+
+    .team-part-1 h3 {
+        width: auto;
+    }
+    .team-part-1 p {
+        width: auto;
+    }
+
+    .team-part-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3rem;
+    }
+    .footer-part-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-menu {
+        margin-bottom: 3rem;
+    }
+}
